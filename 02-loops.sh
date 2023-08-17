@@ -4,10 +4,10 @@ USERID=$(id -u)
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$@ ....$R FAILURE $N"
+        echo -e "$i ....$R FAILURE $N"
          exit 1
     else
-         echo -e "$@ ....$G SUCCESS $N"
+         echo -e "$i ....$G SUCCESS $N"
     fi
 
 }
@@ -29,5 +29,5 @@ for i in $@
 do 
  
 yum install $i -y >>$LOGFILE
-VALIDATE $? "Installing $@ "
+VALIDATE $? "Installing $i "
 done
