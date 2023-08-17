@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 VALIDATE(){
-    if [ $1 -ne 0 ]
+    if [ $i -ne 0 ]
     then
         echo -e "Installing $i ....$R FAILURE $N"
          exit 1
