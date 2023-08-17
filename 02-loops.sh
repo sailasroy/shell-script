@@ -22,10 +22,10 @@ VALIDATE(){
 
  if [ $? -gt 0 ]
     then
-        echo -e "Not installed $i ....$R FAILURE $N"
+        echo -e "Already installed $i ....$R FAILURE $N"
          exit 1
     else
-         echo -e "Already Installed $i ....$G SUCCESS $N"
+         echo -e "need to install $i ....$G SUCCESS $N"
     fi
 
 
