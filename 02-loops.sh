@@ -26,7 +26,7 @@ if [ $USERID -ne 0 ]
 
 for i in $@
 do 
-VALIDATE $?
+VALIDATE $? "Installing $2"
 yum install $i -y >>$LOGFILE
 
 done
