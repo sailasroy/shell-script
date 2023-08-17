@@ -19,6 +19,15 @@ VALIDATE(){
     fi
 
 }
+ if [ $? -ne 0 ]
+    then
+        echo -e "Already installed $i ....$R FAILURE $N"
+         exit 1
+    else
+         echo -e "Not Installed $i ....$G SUCCESS $N"
+    fi
+
+
     DATE=$(date +%F)
     SCRIPT_NAME=$0
     LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
@@ -50,7 +59,7 @@ done
 #     echo "$pkg NOT installed"
 # fi
 
-check_for_package(){
+ check_for_package(){
   if dpkg-query -s "${1}" 1>/dev/null 2>&1; then
     return 0   # package is installed
   else
