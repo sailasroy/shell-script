@@ -19,7 +19,8 @@ VALIDATE(){
     fi
 
 }
- if [ $? -ne 0 ]
+
+ if [ $? -gt 0 ]
     then
         echo -e "Not installed $i ....$R FAILURE $N"
          exit 1
