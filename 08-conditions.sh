@@ -18,7 +18,7 @@ if [ $USERID -ne 0 ]
     echo "Mysql istallation success"
     fi
 
- yum install mysql -y
+ yum install postfix -y
 
  if [ $? -ne 0 ]
     then
