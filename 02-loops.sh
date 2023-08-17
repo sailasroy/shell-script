@@ -42,10 +42,22 @@ done
 # echo "Install $i the package"
 # fi
 
-pkg="$i"
-if rpm -q $pkg
-then
-    echo "$pkg installed"
-else
-    echo "$pkg NOT installed"
-fi
+# pkg="$i"
+# if rpm -q $pkg
+# then
+#     echo "$pkg installed"
+# else
+#     echo "$pkg NOT installed"
+# fi
+
+check_for_package(){
+  if dpkg-query -s "${1}" 1>/dev/null 2>&1; then
+    return 0   # package is installed
+  else
+    if apt-cache show "$1" 1>/dev/null 2>&1; then
+      return 1 # package is not installed, it is available in package repository 
+    else
+      return 2 # package is not installed, it is not available in package repository
+    fi
+  fi
+}
