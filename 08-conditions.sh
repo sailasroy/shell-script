@@ -11,6 +11,9 @@ VALIDATE(){
     fi
 
 }
+    DATE=$(date +%F)
+    SCRIPT_NAME=$0
+    LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 if [ $USERID -ne 0 ]
     then
@@ -18,7 +21,7 @@ if [ $USERID -ne 0 ]
     exit 1
     fi 
 
-    yum install mysql -y
+    yum install mysql -y &>>$LOGFILE
     VALIDATE $? "Installing Mysql"
     # if [ $? -ne 0 ]
     # then
@@ -28,7 +31,7 @@ if [ $USERID -ne 0 ]
     # echo "Mysql istallation success"
     # fi
 
- yum install postfix -y
+ yum install postfix -y &>>$LOGFILE
     VALIDATE $? "Installing Postfix"
 
 #  if [ $? -ne 0 ]
