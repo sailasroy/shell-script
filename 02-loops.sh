@@ -4,10 +4,10 @@ USERID=$(id -u)
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$VAR ....$R FAILURE $N"
+        echo -e "$2 ....$R FAILURE $N"
          exit 1
     else
-         echo -e "$VAR ....$G SUCCESS $N"
+         echo -e "$2 ....$G SUCCESS $N"
     fi
 
 }
@@ -17,7 +17,7 @@ VALIDATE(){
     R="\e[31m"
     G="\e[32m"
     N="\e[0m"
-    VAR=$@
+   
 if [ $USERID -ne 0 ]
     then
     echo "ERROR :: sign in with root access"
@@ -27,7 +27,7 @@ if [ $USERID -ne 0 ]
 
 for i in $@
 do 
-VALIDATE $? "Installing $VAR"
+VALIDATE $? "Installing $2"
 yum install $i -y >>$LOGFILE
 
 done
