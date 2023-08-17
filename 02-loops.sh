@@ -34,3 +34,9 @@ do
 yum install $i -y >>$LOGFILE
 VALIDATE $? "$i"
 done
+
+if [ $@ -ne 0 ]
+then
+echo "Package $i already installed"
+elso
+echo "Install $i the package"
