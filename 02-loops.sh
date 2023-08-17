@@ -27,5 +27,5 @@ if [ $USERID -ne 0 ]
 for i in $@
 do 
 yum install $i -y
-VALIDATE=$?S
+echo "VALIDATE()=$?"
 done
