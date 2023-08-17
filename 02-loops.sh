@@ -40,3 +40,4 @@ then
 echo "Package $i already installed"
 elso
 echo "Install $i the package"
+fi
