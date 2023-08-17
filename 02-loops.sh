@@ -20,7 +20,7 @@ VALIDATE(){
 
 }
 
- if [ $@ -ge 0 ]
+ if [ $@ -ne 0 ]
     then
         echo -e "Already installed $i ....$R FAILURE $N"
          exit 1
