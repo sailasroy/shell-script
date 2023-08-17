@@ -23,7 +23,7 @@ if [ $USERID -ne 0 ]
     exit 1
     fi 
 
-    yum install mysql -y &>>$LOGFILE
+    yum install mysqqql -y &>>$LOGFILE
     VALIDATE $? "Installing Mysql"
     # if [ $? -ne 0 ]
     # then
