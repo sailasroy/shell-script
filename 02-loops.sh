@@ -35,9 +35,17 @@ yum install $i -y >>$LOGFILE
 VALIDATE $? "$i"
 done
 
-if [ $1 -ne 0 ]
+# if [ $1 -ne 0 ]
+# then
+# echo "Package $i already installed"
+# elso
+# echo "Install $i the package"
+# fi
+
+pkg="$i"
+if rpm -q $pkg
 then
-echo "Package $i already installed"
-elso
-echo "Install $i the package"
+    echo "$pkg installed"
+else
+    echo "$pkg NOT installed"
 fi
