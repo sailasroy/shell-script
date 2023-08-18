@@ -28,7 +28,7 @@ VALIDATE(){
 
 for i in $@
 do  
-yum list installed $i
+yum list installed $i >>$LOGFILE
 if [ $? -ne 0 ]
 then
 echo "There is no $i package , needs to install"
