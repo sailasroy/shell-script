@@ -12,7 +12,7 @@ if [ $USERID -ne 0 ]
 fi
 
 VALIDATE(){
-if [ $1 -ne 0]
+if [ $1 -ne 0 ]
     then
         echo -e "Insatallation of $2 .... $R FAILURE $N"
         exit 1
