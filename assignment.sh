@@ -7,17 +7,17 @@ DATE=$(date +%F)
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
     then
-        echo -e "$R ERROR :: sign in with root access $N "
+        echo -e "$R ERROR :: sign in with root access $N"
         exit 1
 fi
 
 VALIDATE(){
 if [ $1 -ne 0]
     then
-        echo "Insatallation of $2 ....$R FAILURE $N "
+        echo -e "Insatallation of $2 .... $R FAILURE $N"
         exit 1
     else     
-        echo "Insatallation of $2 ....$G SUCCESS $N "   
+        echo -e "Insatallation of $2 .... $G SUCCESS $N"   
 fi        
 }
 
