@@ -1,5 +1,5 @@
 #!/bin /bash
-DATE=$(date +%F:+%H:+%M:+%S)
+DATE=$(date +%F:%H:%M:%S)
 
 APPS_DIR_FOLDER=/home/centos/apps-logs
 LOGDIR=/home/centos/script-logs
