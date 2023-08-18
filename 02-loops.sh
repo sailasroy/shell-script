@@ -35,7 +35,6 @@ yum install $i -y >>$LOGFILE
 VALIDATE $? "$i"
 then 
 echo "the package $i already existing"
-exit 1
 fi
 
  
