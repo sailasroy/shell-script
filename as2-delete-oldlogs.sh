@@ -1,5 +1,5 @@
 #!/bin /bash
-DATE=$(date +%F)
+DATE=$(date +%F:+%H:+%M:+%S)
 
 APPS_DIR_FOLDER=/home/centos/apps-logs
 LOGDIR=/home/centos/script-logs
@@ -10,7 +10,7 @@ LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
 
 FILES_TO_DELETE=$(find $APPS_DIR_FOLDER -name "*.log" -type f -mtime +14)
 
-echo "$FILES_TO_DELETE" # prints the old logs 
+echo "Script started eecuting at $DATE" # prints the old logs 
 
 ## TO Delete the log files we will use while loop
 
