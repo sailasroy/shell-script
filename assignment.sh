@@ -14,10 +14,10 @@ fi
 VALIDATE(){
 if [ $1 -ne 0]
     then
-        echo "Insatallation of $2 ....$R FAILURE $N"
+        echo "Insatallation of $2 ....$R FAILURE $N "
         exit 1
     else     
-        echo "Insatallation of $2 ....$G SUCCESS $N"   
+        echo "Insatallation of $2 ....$G SUCCESS $N "   
 fi        
 }
 
