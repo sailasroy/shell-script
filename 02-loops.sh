@@ -30,6 +30,7 @@ for i in $@
 do  
 yum list installed $i
 if [ $? -ne 0 ]
+then
 echo "There is no $i package , needs to install"
 yum install $i -y >>$LOGFILE
 VALIDATE $? "$i"
