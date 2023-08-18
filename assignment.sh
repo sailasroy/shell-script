@@ -26,11 +26,11 @@ LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 for i in $@
 do 
-     yum list installed $i &<<$LOGFILE
+     yum list installed $i &>>$LOGFILE
 if [ $? -ne 0 ]
     then
         echo "The package $i is not installed"
-      yum install $i -y &<<$LOGFILE
+      yum install $i -y &>>$LOGFILE
 VALIDATE $? "$i"    
     else
         echo -e "$Y The package $i is already installed $N"
