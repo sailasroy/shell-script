@@ -33,6 +33,7 @@ if [ #? -ne 0 ]
 echo "There is no $i package , needs to install"
 then 
 echo "the package $i already existing"
+exit 1
 fi
 yum install $i -y >>$LOGFILE
 VALIDATE $? "$i" 
