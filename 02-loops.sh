@@ -31,8 +31,8 @@ do
 yum list installed $i
 if [ #? -ne 0 ]
 echo "There is no $i package , needs to install"
-else 
-echo "the package already existing"
+then 
+echo "the package $i already existing"
 fi
 yum install $i -y >>$LOGFILE
 VALIDATE $? "$i" 
