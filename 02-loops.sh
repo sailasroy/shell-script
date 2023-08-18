@@ -34,7 +34,7 @@ then
 echo "There is no $i package , needs to install"
 yum install $i -y >>$LOGFILE
 VALIDATE $? "$i"
-then 
+else
 echo "the package $i already existing"
 fi
 
