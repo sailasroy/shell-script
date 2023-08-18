@@ -11,10 +11,10 @@ if [ $USERID -ne 0 ]
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "Installing $i ....$R FAILURE $N"
+        echo -e "Installing $2 ....$R FAILURE $N"
          exit 1
     else
-         echo -e " Installing $i ....$G SUCCESS $N"
+         echo -e " Installing $2 ....$G SUCCESS $N"
     fi
 
 }
@@ -29,13 +29,15 @@ VALIDATE(){
 for i in $@
 do  
 yum list installed $i
-if [ #? -ne 0 ]
+if [ $? -ne 0 ]
 echo "There is no $i package , needs to install"
+yum install $i -y >>$LOGFILE
+VALIDATE $? "$i"
 then 
 echo "the package $i already existing"
 exit 1
 fi
-yum install $i -y >>$LOGFILE
-VALIDATE $? "$i" 
+
+ 
 done
 
