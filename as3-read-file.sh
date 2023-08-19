@@ -7,4 +7,4 @@
      echo "$line"
     ##echo "$character"
 
-    done < $FILENAME
+    done <$FILENAME
