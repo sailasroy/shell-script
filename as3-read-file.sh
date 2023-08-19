@@ -1,7 +1,7 @@
 #!/bin/bash
     FILENAME=/home/centos/roy/dilli.txt
 
-    while read in line
+    while read line
     do 
 
      echo "$line"
