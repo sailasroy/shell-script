@@ -1,7 +1,7 @@
 #!/bin/bash
     FILENAME=/home/centos/roy/dillis.txt
 
-    while read -n character
+    while read -n1 character
     do 
 
     ## echo "$line"
