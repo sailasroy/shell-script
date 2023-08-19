@@ -7,7 +7,7 @@
     do 
     ##echo "Line no. $n : $line"
 
-    echo "$line"
+    echo "$FILE_FREQUENCY"
     #echo "$character"
     ##n=$((n+1))
 
