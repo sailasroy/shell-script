@@ -1,8 +1,8 @@
 #!/bin/bash
     FILENAME=/home/centos/roy/dillis.txt
     #n=1
-    FILE_FREQUENCY=$(cat $FILENAME | tr -s ' ' '\n' | awk '{nums[$1]++}END{for(word in nums) print word, nums[word]}' | sort -rn -k2)
-    number_of_lines=`wc --lines < $FILENAME`
+    FILE_FREQUENCY=$(awk '{words[$1]+=1} END{for(word in words){print word,words[word]}}' RS="[ \n]+" $FILENAME  | sort -nrk2)
+    number_of_lines=`wc --words < $FILENAME`
     while read line
     do 
     ##echo "Line no. $n : $line"
