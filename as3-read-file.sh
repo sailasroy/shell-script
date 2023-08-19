@@ -5,4 +5,4 @@
     do 
     echo "$line"
 
-    done <<< $FILENAME
+    done << $FILENAME
