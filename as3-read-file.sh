@@ -3,9 +3,21 @@
     #n=1
     FILE_FREQUENCY=$(cat $FILENAME | tr -s ' ' '\n' | awk '{nums[$1]++}END{for(word in nums) print word, nums[word]}' | sort -rn -k2)
     number_of_lines=`wc --words < $FILENAME`
-    REPLACE_WORD=$(sed -i 's/santu/anoop/g' $FILENAME)
+    ##REPLACE_WORD=$(sed -i 's/santu/anoop/g' $FILENAME)
+    REPLACE(){
+        read -p "Enter the search string: " search
+
+# Take the replace string
+read -p "Enter the replace string: " replace
+
+if [[ $search != "" && $replace != "" ]]; then
+  sed -i "s/$search/$replace/" $FILENAME
+fi
+    }
+
     while read line
     do 
+    REPLACE $@
     ##echo "Line no. $n : $line"
 
     echo "$REPLACE_WORD $line"
