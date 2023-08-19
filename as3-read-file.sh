@@ -21,10 +21,11 @@
     ##echo "Line no. $n : $line"
 
     echo "$REPLACE_WORD $line"
-    echo "$FILE_FREQUENCY"
+    
     #echo "$character"
     ##n=$((n+1))
 
     done <$FILENAME
 
         echo "number of words =$number_of_lines"
+        echo "$FILE_FREQUENCY"
