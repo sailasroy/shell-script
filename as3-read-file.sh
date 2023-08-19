@@ -21,7 +21,7 @@
     # REPLACE $
     ##echo "Line no. $n : $line"
 
-    echo "$REPLACE_WORD $line"
+    echo "$line"
     
     #echo "$character"
     ##n=$((n+1))
