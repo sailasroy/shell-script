@@ -29,5 +29,5 @@
     done <$FILENAME
 
         echo "number of words =$number_of_lines"
-        echo "$FILE_FREQUENCY"
+       ## echo "$FILE_FREQUENCY"
         echo "$REVERSE"
