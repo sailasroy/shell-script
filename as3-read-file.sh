@@ -20,7 +20,7 @@
     # REPLACE $
     ##echo "Line no. $n : $line"
 
-    echo "$REPLACE_WORD $FILE_FREQUENCY $line"
+    echo "$REPLACE_WORD $line"
     
     #echo "$character"
     ##n=$((n+1))
