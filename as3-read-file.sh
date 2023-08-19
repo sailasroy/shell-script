@@ -4,6 +4,7 @@
     FILE_FREQUENCY=$(cat $FILENAME | tr -s ' ' '\n' | awk '{nums[$1]++}END{for(word in nums) print word, nums[word]}' | sort -rn -k2)
     number_of_lines=`wc --words < $FILENAME`
     REPLACE_WORD=$(sed -i 's/srikanth/roy/g' $FILENAME)
+    REVERSE=$(tac -r $FILENAME > $FILENAME)
 #     REPLACE(){
 #         read -p "Enter the search string: " search
 
@@ -29,3 +30,4 @@
 
         echo "number of words =$number_of_lines"
         echo "$FILE_FREQUENCY"
+        echo "$REVERSE"
