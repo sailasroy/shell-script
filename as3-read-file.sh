@@ -1,14 +1,14 @@
 #!/bin/bash
     FILENAME=/home/centos/roy/dillis.txt
-    n=1
+    #n=1
 
-    #while read -n1 character
+    
     while read line
     do 
-    echo "Line no. $n : $line"
+    ##echo "Line no. $n : $line"
 
-    ## echo "$line"
+    echo "$line"
     #echo "$character"
-    n=$((n+1))
+    ##n=$((n+1))
 
     done <$FILENAME
