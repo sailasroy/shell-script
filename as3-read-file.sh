@@ -13,4 +13,4 @@
 
     done <$FILE_FREQUENCY 
 
-        echo "number of lines =$number_of_lines"
+        echo "number of words =$number_of_lines"
