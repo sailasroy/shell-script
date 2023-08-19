@@ -25,7 +25,7 @@
     #echo "$character"
     ##n=$((n+1))
 
-    done <$FILENAME
+    done <$FILE_FREQUENCY
 
         echo "number of words =$number_of_lines"
         echo "$FILE_FREQUENCY"
