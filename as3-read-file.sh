@@ -8,7 +8,7 @@
     do 
     ##echo "Line no. $n : $line"
 
-    echo "$REPLACE_WORD"
+    echo "$REPLACE_WORD $line"
     #echo "$character"
     ##n=$((n+1))
 
