@@ -1,10 +1,10 @@
 #!/bin/bash
     FILENAME=/home/centos/roy/dilli.txt
 
-    while read -n1 character
+    while read in line
     do 
 
-    ##echo "$line"
-    echo "$character"
+     echo "$line"
+    ##echo "$character"
 
     done < $FILENAME
