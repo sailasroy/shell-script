@@ -1,5 +1,5 @@
 #!/bin/bash
-    FILENAME=/home/centos/roy/dilli.txt
+    FILENAME=/home/centos/roy/dillis.txt
 
     while read line
     do 
