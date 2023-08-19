@@ -8,7 +8,7 @@
     do 
     ##echo "Line no. $n : $line"
 
-    echo "$FILENAME"
+    echo "$line"
     #echo "$character"
     ##n=$((n+1))
 
