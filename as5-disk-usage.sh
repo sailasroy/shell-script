@@ -14,8 +14,8 @@ DISK_USAGE_THRESHOLD=1
 while IFS= read line
 do
 ##echp "output : $line"
-usage=$(echo $line| awk '{print $6}' | cut -d % -f1 )
-partition=(echo $line| awk '{print $1}')
+usage=$(echo $line | awk '{print $6}' | cut -d % -f1 )
+partition=(echo $line | awk '{print $1}')
 ##echo "$usage"
 if [ $usage -gt $DISK_USAGE_THRESHOLD]
 then 
