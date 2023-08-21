@@ -20,6 +20,7 @@ partition=$(echo $line| awk '{print $1}' )
 if [ $usage -gt $DISK_USAGE_THRESHOLD]
 then 
 echo "High Disk Usage on $partition : $usage"
+fi
 
 done <<< $DISK_USAGE
 
