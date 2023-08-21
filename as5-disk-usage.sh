@@ -55,6 +55,8 @@ do
 done <<< $DISK_USAGE
 
 echo -e "message: $message"
+echo "$message" | mail -s "message" info@joindevops.com
+
 
 
 
