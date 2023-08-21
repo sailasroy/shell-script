@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TO_ADDRESS=$!
+TO_ADDRESS=$1
 SUBJECT=$2
 BODY=$(sed -e 's/[]\/$*.^[]/\\&/g' <<< $3)
 ALERT_TYPE=$4
@@ -13,4 +13,4 @@ FINAL_BODY=$(sed -e "s/TEAM_NAME/$TEAM_NAME/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -
 
 ##echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECT \n Content-Type: text/html")" "$TO_ADDRESS"
 
-echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECT\nContent-Type: text/html")" "$TO_ADDRESS"
+echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECT")" "$TO_ADDRESS"
