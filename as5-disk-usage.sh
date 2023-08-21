@@ -15,8 +15,11 @@ while IFS= read line
 do
 ##echp "output : $line"
 usage=$(echo $line| awk '{print $6}' | cut -d % -f1 )
-
-echo "$usage"
+partition=(echo $line| awk '{print $1}')
+##echo "$usage"
+if [ $usage -gt $DISK_USAGE_THRESHOLD]
+then 
+echo "High Disk Usage on $partition : $usage"
 
 done <<< $DISK_USAGE
 
