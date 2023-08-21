@@ -8,7 +8,7 @@ LOG_DIR=/tmp
 DATE=$(date +%F:%H:%M:%S)
 SCRIPT_NAME=$0
 LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
-DISK_USAGE=$(grep -vE 'tmpfs|Filesystem)'
+DISK_USAGE=$(grep -vE 'tmpfs|Filesystem')
 DISK_USAGE_THRESHOLD=1
 
 while IFS= read line
