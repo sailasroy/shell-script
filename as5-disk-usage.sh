@@ -14,7 +14,7 @@ DISK_USAGE_THRESHOLD=1
 while IFS= read line
 do
 ##echp "output : $line"
-usage=$(echo $line | awk '{print $6}' )
+usage=$(echo $line| awk '{print $6}' )
 
 done <<< $DISK_USAGE
 
