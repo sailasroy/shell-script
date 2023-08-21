@@ -13,4 +13,5 @@ FINAL_BODY=$(sed -e "s/TEAM_NAME/$TEAM_NAME/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -
 
 ##echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECT \n Content-Type: text/html")" "$TO_ADDRESS"
 
-echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECT")" "$TO_ADDRESS"
+######echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECT")" "$TO_ADDRESS"
+echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECT \n Content-Type: text/html")" "$TO_ADDRESS"
