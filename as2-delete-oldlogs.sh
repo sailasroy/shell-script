@@ -10,19 +10,19 @@ LOGDIR=/home/centos/script-logs
 
 FILES_TO_DELETE=$(find $APPS_DIR_FOLDER -name "*.log" -type f -mtime +14)
 echo "$FILES_TO_DELETE"
-# echo "Script started eecuting at $DATE" 
+echo "Script started eecuting at $DATE" 
 # prints the old logs 
 
 ## TO Delete the log files we will use while loop
 
-# while read line
+ while read line
 
-#     do 
-#     # write statements here
-#         echo " Deleting $line" &>>$LOGFILE
-#         rm -rf $line
+     do 
+     # write statements here
+         echo " Deleting $line" &>>$LOGFILE
+         rm -rf $line
 
-#     done <<< $FILES_TO_DELETE
+     done <<< $FILES_TO_DELETE
 
 
 
