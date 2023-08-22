@@ -9,7 +9,7 @@ LOGDIR=/home/centos/script-logs
 # finding the specified files/logs at the given time or date
 
 FILES_TO_DELETE=$(find $APPS_DIR_FOLDER -name "*.log" -type f -mtime +14)
-echo (" $FILES_TO_DELETE ")
+echo "$FILES_TO_DELETE"
 # echo "Script started eecuting at $DATE" 
 # prints the old logs 
 
