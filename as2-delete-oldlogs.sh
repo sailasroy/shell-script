@@ -2,7 +2,7 @@
 DATE=$(date +%F:%H:%M:%S)
 
 APPS_DIR_FOLDER=/home/centos/apps-logs
-LOGDIR=/home/centos/script-logs
+#LOGDIR=/home/centos/script-logs
 # SCRIPT_NAME=$0
 # LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
 
