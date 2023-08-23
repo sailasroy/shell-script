@@ -24,7 +24,7 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 
-    useradd santu
+    useradd ramesh
     if getent passwd $1 > /dev/null 2>&1; then
     echo "yes the user exists"
 else
