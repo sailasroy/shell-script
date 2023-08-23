@@ -24,10 +24,10 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 
-   ## USERNAME=$(id $@)
+   USERNAME=$(id $@)
 ##useradd moses
 
-for i in  {id $1}
+for i in $USERNAME
 do
 useradd samuel
 if [ $i -ne 0 ]
