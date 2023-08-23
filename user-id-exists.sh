@@ -25,11 +25,11 @@ VALIDATE(){
     N="\e[0m"
 
     USERNAME=$(id $@)
-##useradd samuel
+useradd samuel
 
 for i in $@
 do
-useradd samuel
+##useradd samuel
 if [ $USERNAME -ne 0 ]
 then
 echo "Username does not exist"
