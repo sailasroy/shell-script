@@ -24,7 +24,15 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 useradd suresh
-sh user-exists.sh
+
+getent passwd $1 > /dev/null 2&>1
+
+if [ $? -eq 0 ]; then
+    echo "yes the user exists"
+else
+    echo "No, the user does not exist"
+fi
+##sh user-exists.sh
 #     if getent passwd $1 > /dev/null 2>&1; then
 #     echo "yes the user exists"
 # else
