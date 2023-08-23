@@ -25,15 +25,26 @@ VALIDATE(){
     N="\e[0m"
 
   ##USERNAME=$(id $@)
- 
-useradd karan
-if [ "id $1" -ne 0 ] ;
-then
-echo "User name does not exist"
-else
-echo "Username exists"
 
-fi
+  for i in $@
+  do
+  id $i
+  if [ $? -ne 0 ]
+ then
+ echo "User name does not exist"
+ useradd $i
+ else 
+ echo "Username already exists"
+ fi
+ done
+# useradd karan
+# if [ "id $1" -ne 0 ] ;
+# then
+# echo "User name does not exist"
+# else
+# echo "Username exists"
+
+# fi
 # for i in $@
 # do
 # if getent passwd $1 > /dev/null 2>&1; then
