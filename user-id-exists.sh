@@ -27,11 +27,17 @@ VALIDATE(){
   ##USERNAME=$(id $@)
  
 useradd moses
-if id "$1" &>/dev/null; then
-    echo 'user found'
+if getent passwd $1 > /dev/null 2>&1; then
+    echo "yes the user exists"
 else
-    echo 'user not found'
+    echo "No, the user does not exist"
 fi
+# if id "$1" &>/dev/null; 
+# then
+#     echo 'user found'
+# else
+#     echo 'user not found'
+# fi
 # for i in $@
 # do
 # id $i
