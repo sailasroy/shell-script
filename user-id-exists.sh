@@ -27,7 +27,7 @@ VALIDATE(){
     USERNAME=$(id $@)
 useradd samuel
 
-for i in $@
+for i in $1
 do
 ##useradd samuel
 if [ $USERNAME -ne 0 ]
