@@ -24,7 +24,7 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 
-    useradd anoop
+    useradd santu
 
 for i in $@
 do  
@@ -32,7 +32,7 @@ id $i >>$LOGFILE
 if [ $? -ne 0 ]
 then
 echo "User $i not exists"
-VALIDATE $? "Creating user $i"
+echo "Creating user $i"
 else
 echo "user $i already exists"
 fi
