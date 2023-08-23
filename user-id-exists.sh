@@ -24,11 +24,12 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 
-    useradd ramesh
+   
 if id -u "$1" >/dev/null 2>&1; then
   echo "user exists"
 else
   echo "user does not exist"
+   useradd ramesh
 fi
 #     if getent passwd $1 > /dev/null 2>&1; then
 #     echo "yes the user exists"
