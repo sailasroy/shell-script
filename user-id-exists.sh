@@ -32,8 +32,8 @@ do
 useradd $i
 if [ $? -ne 0 ]
 then
-useradd moses
 echo "Username does not exist"
+useradd moses
 else
 echo "Username exists"
 fi
