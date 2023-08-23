@@ -23,12 +23,14 @@ VALIDATE(){
     R="\e[31m"
     G="\e[32m"
     N="\e[0m"
+
+    USERNAME=$(id $1)
 useradd samuel
 
 for i in $@
 do
 useradd samuel
-if [ id "$i" -ne 0 ]
+if [ $USERNAME -ne 0 ]
 then
 echo "Username does not exist"
 else
