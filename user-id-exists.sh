@@ -25,7 +25,7 @@ VALIDATE(){
     N="\e[0m"
 useradd reddy
 
-getent passwd $@ > /dev/null 2&>1
+getent passwd $@  
 
 if [ $? -ne 0 ]; then
     echo "No, the user does not exist"
