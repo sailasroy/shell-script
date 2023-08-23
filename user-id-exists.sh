@@ -26,7 +26,8 @@ VALIDATE(){
 useradd samuel
 
 for i in $@
-do 
+do
+useradd samuel
 if [ id '$i' -ne 0 ]
 then
 echo "Username does not exist"
