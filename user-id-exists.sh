@@ -24,7 +24,7 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 
-    useradd roy
+    useradd siva
 
 for i in $@
 do  
