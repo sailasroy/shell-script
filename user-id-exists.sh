@@ -25,7 +25,7 @@ VALIDATE(){
     N="\e[0m"
 
     USERNAME=$(id $@)
-useradd samuel
+useradd moses
 
 for i in $USERNAME
 do
