@@ -27,12 +27,18 @@ VALIDATE(){
   ##USERNAME=$(id $@)
  
 useradd rustam
-for i in $@
-do
-if getent passwd $1 > /dev/null 2>&1; then
-    echo "yes the user exists"
+if [ id $1 -ne 0 ] 
+then
+echo "User name does not exist"
 else
-    echo "No, the user does not exist"
+echo "Username exists"
+fi
+# for i in $@
+# do
+# if getent passwd $1 > /dev/null 2>&1; then
+#     echo "yes the user exists"
+# else
+#     echo "No, the user does not exist"
      
 ##useradd rustfuckam
 fi
