@@ -30,7 +30,7 @@ useradd samuel
 for i in $USERNAME
 do
 ##useradd samuel
-if [ $USERNAME -ne 0 ]
+if [ $i -ne 0 ]
 then
 echo "Username does not exist"
 else
