@@ -32,7 +32,7 @@ id $i >>$LOGFILE
 if [ $? -ne 0 ]
 then
 echo "User $i not exists"
-##VALIDATE $? "Creating user"
+VALIDATE $? "Creating user $i"
 else
 echo "user $i already exists"
 fi
