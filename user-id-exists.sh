@@ -26,12 +26,13 @@ VALIDATE(){
 
   ##USERNAME=$(id $@)
  
-useradd rustam
-if [ "id $1" -ne 0 ] 
+useradd karan
+if [ "id $1" -ne 0 ] ;
 then
 echo "User name does not exist"
 else
 echo "Username exists"
+
 fi
 # for i in $@
 # do
