@@ -25,11 +25,16 @@ VALIDATE(){
     N="\e[0m"
 
     useradd ramesh
-    if getent passwd $1 > /dev/null 2>&1; then
-    echo "yes the user exists"
+if id -u "$1" >/dev/null 2>&1; then
+  echo "user exists"
 else
-    echo "No, the user does not exist"
+  echo "user does not exist"
 fi
+#     if getent passwd $1 > /dev/null 2>&1; then
+#     echo "yes the user exists"
+# else
+#     echo "No, the user does not exist"
+# fi
 
 #  for i in $@
 #  do  
