@@ -25,13 +25,22 @@ VALIDATE(){
     N="\e[0m"
 useradd samuel
 
-getent passwd $@  
-
-if [ $? -ne 0 ]; then
-    echo "No, the user does not exist"
+for i in $@
+do 
+if [ id '$i' -ne 0 ]
+then
+echo "Username does not exist"
 else
-    echo "yes the user exists"
+echo "Username exists"
 fi
+done
+# getent passwd $@  
+
+# if [ $? -ne 0 ]; then
+#     echo "No, the user does not exist"
+# else
+#     echo "yes the user exists"
+# fi
 ##sh user-exists.sh
 #     if getent passwd $1 > /dev/null 2>&1; then
 #     echo "yes the user exists"
