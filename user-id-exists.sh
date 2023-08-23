@@ -28,7 +28,7 @@ VALIDATE(){
 
 for i in $@
 do  
-id $i >>$LOGFILE
+id $i 
 if [ $? -ne 0 ]
 then
 echo "User $i not exists"
