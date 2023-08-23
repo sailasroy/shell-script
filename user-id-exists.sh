@@ -26,14 +26,14 @@ VALIDATE(){
 
   ##USERNAME=$(id $@)
  
-
+useradd moses
 for i in $@
 do
-getent passwd $i
+id $i
 if [ $? -ne 0 ]
 then
 echo "Username does not exist"
-useradd moses
+##useradd moses
 else
 echo "Username exists"
 fi
