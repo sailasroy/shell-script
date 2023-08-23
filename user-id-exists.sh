@@ -24,8 +24,8 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 
-    USERNAME=$(id $1)
-useradd samuel
+    USERNAME=$(id $@)
+##useradd samuel
 
 for i in $@
 do
