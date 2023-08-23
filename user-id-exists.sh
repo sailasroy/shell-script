@@ -24,7 +24,7 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 
-    useradd roy
+    useradd $i
 
 for i in $@
 do  
@@ -32,8 +32,8 @@ id $i >>$LOGFILE
 if [ $? -ne 0 ]
 then
 echo "User $i not exists"
-useradd $i
-VALIDATE $? "Creating user"
+##VALIDATE $? "Creating user"
 else
 echo "user $i already exists"
 fi
+done
