@@ -1,6 +1,11 @@
 #!/bin/bash
 
 USERID=$(id -u)
+if [ $USERID -ne 0 ]
+    then
+    echo "ERROR :: sign in with root access"
+    exit 1
+    fi 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
@@ -17,11 +22,7 @@ VALIDATE(){
     R="\e[31m"
     G="\e[32m"
     N="\e[0m"
-if [ $USERID -ne 0 ]
-    then
-    echo "ERROR :: sign in with root access"
-    exit 1
-    fi 
+
 
     yum install mysql -y &>>$LOGFILE
     VALIDATE $? "Installing Mysql"
