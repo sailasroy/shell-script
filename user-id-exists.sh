@@ -30,7 +30,7 @@ VALIDATE(){
 for i in $@
 do
 useradd samuel
-if [ $USERNAME -ne 0 ]
+if [ $USERNAME -ne $i ]
 then
 echo "Username does not exist"
 else
