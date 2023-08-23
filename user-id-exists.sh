@@ -26,7 +26,7 @@ VALIDATE(){
 
   ##USERNAME=$(id $@)
  
-useradd moses
+useradd $i
 for i in $@
 do
 id $i
