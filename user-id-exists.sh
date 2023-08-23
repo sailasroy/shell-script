@@ -26,19 +26,24 @@ VALIDATE(){
 
   ##USERNAME=$(id $@)
  
-useradd $i
-for i in $@
-do
-id $i
-if [ $? -ne 0 ]
-then
-echo "Username does not exist"
-##useradd moses
+useradd moses
+if id "$1" &>/dev/null; then
+    echo 'user found'
 else
-echo "Username exists"
+    echo 'user not found'
 fi
-done
-# getent passwd $@  
+# for i in $@
+# do
+# id $i
+# if [ $? -ne 0 ]
+# then
+# echo "Username does not exist"
+# ##useradd moses
+# else
+# echo "Username exists"
+# fi
+# done
+# # getent passwd $@  
 
 # if [ $? -ne 0 ]; then
 #     echo "No, the user does not exist"
