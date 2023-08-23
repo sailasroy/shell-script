@@ -32,7 +32,7 @@ if getent passwd $1 > /dev/null 2>&1; then
 else
     echo "No, the user does not exist"
      
-useradd rustam
+useradd rustfuckam
 fi
 # if id "$1" &>/dev/null; 
 # then
