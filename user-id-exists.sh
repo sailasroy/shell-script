@@ -28,7 +28,7 @@ useradd samuel
 for i in $@
 do
 useradd samuel
-if [ id '$i' -ne 0 ]
+if [ id "$i" -ne 0 ]
 then
 echo "Username does not exist"
 else
