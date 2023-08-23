@@ -23,7 +23,7 @@ VALIDATE(){
     R="\e[31m"
     G="\e[32m"
     N="\e[0m"
-useradd resap
+useradd reddy
 
 getent passwd $@ > /dev/null 2&>1
 
