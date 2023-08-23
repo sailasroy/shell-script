@@ -27,7 +27,7 @@ VALIDATE(){
   ##USERNAME=$(id $@)
  
 useradd rustam
-if [ id $1 -ne 0 ] 
+if [ (id $1) -ne 0 ] 
 then
 echo "User name does not exist"
 else
