@@ -26,7 +26,7 @@ VALIDATE(){
 
   ##USERNAME=$(id $@)
  
-useradd moses
+useradd rustam
 if getent passwd $1 > /dev/null 2>&1; then
     echo "yes the user exists"
 else
