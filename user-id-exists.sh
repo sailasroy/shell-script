@@ -29,7 +29,7 @@ VALIDATE(){
 
 for i in $@
 do
-useradd $i
+id $i
 if [ $? -ne 0 ]
 then
 echo "Username does not exist"
