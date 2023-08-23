@@ -27,7 +27,7 @@ useradd resap
 
 getent passwd $@ > /dev/null 2&>1
 
-if [ $? -eq 0 ]; then
+if [ $? -ne 0 ]; then
     echo "No, the user does not exist"
 else
     echo "yes the user exists"
