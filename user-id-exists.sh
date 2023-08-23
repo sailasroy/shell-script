@@ -26,14 +26,14 @@ VALIDATE(){
 
     useradd santu
 
-for i in $@
-do  
-id $i 
-if [ $? -ne 0 ]
-then
-echo "User $i not exists"
-echo "Creating user $i"
-else
-echo "user $i already exists"
-fi
-done
+# for i in $@
+# do  
+# id $i 
+# if [ $? -ne 0 ]
+# then
+# echo "User $i not exists"
+# echo "Creating user $i"
+# else
+# echo "user $i already exists"
+# fi
+# done
