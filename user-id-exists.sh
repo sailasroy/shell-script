@@ -24,14 +24,15 @@ VALIDATE(){
     G="\e[32m"
     N="\e[0m"
 
-  USERNAME=$(id $@)
-##useradd moses
+  ##USERNAME=$(id $@)
+ 
 
 for i in $@
 do
-useradd samuel
-if [ $USERNAME -ne $i ]
+useradd $i
+if [ $? -ne 0 ]
 then
+useradd moses
 echo "Username does not exist"
 else
 echo "Username exists"
