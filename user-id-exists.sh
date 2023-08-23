@@ -23,7 +23,7 @@ VALIDATE(){
     R="\e[31m"
     G="\e[32m"
     N="\e[0m"
-useradd suresh
+useradd rupas
 
 getent passwd $1 > /dev/null 2&>1
 
