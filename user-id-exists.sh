@@ -25,15 +25,20 @@ VALIDATE(){
     N="\e[0m"
 
     useradd santu
+    if getent passwd $1 > /dev/null 2>&1; then
+    echo "yes the user exists"
+else
+    echo "No, the user does not exist"
+fi
 
-# for i in $@
-# do  
-# id $i 
-# if [ $? -ne 0 ]
-# then
-# echo "User $i not exists"
-# echo "Creating user $i"
-# else
-# echo "user $i already exists"
-# fi
-# done
+#  for i in $@
+#  do  
+#  id $i 
+#  if [ $? -ne 0 ]
+#  then
+#  echo "User $i not exists"
+#  echo "Creating user $i"
+#  else
+#  echo "user $i already exists"
+#  fi
+#  done
