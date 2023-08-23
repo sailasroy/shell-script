@@ -26,14 +26,17 @@ VALIDATE(){
 
   ##USERNAME=$(id $@)
  
-##useradd rustam
+useradd rustam
+for i in $@
+do
 if getent passwd $1 > /dev/null 2>&1; then
     echo "yes the user exists"
 else
     echo "No, the user does not exist"
      
-useradd rustfuckam
+##useradd rustfuckam
 fi
+done
 # if id "$1" &>/dev/null; 
 # then
 #     echo 'user found'
