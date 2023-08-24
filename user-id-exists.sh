@@ -26,34 +26,74 @@ VALIDATE(){
 
   ##USERNAME=$(id $@)
 
-  USER_ROBOSHOP=$(id roboshop)
-if [ $? -ne 0 ];
-then 
-    echo -e "$Y...USER roboshop is not present so creating one now..$N"
-    useradd roboshop &>>$LOGFILE
-else 
-    echo -e "$G...USER roboshop is already present so  skipping now.$N"
+  for i in $@
+  do
+  id $i
+  if [ $? -ne 0 ]
+ then
+ echo "User name does not exist"
+ useradd $i
+ else 
+ echo "Username already exists"
  fi
+ done
+# useradd karan
+# if [ "id $1" -ne 0 ] ;
+# then
+# echo "User name does not exist"
+# else
+# echo "Username exists"
 
-#write a condition to check directory already exist or not
-VALIDATE_APP_DIR=$(cd /app)
-#write a condition to check directory already exist or not
-if [ $? -ne 0 ];
-then 
-    echo -e " $Y /app directory not there so creating one $N"
-    mkdir /app &>>$LOGFILE   
-else
-    echo -e "$G /app directory already present so skipping ....$N" 
-    fi
+# fi
+# for i in $@
+# do
+# if getent passwd $1 > /dev/null 2>&1; then
+#     echo "yes the user exists"
+# else
+#     echo "No, the user does not exist"
+     
+##useradd rustfuckam
+fi
+done
+# if id "$1" &>/dev/null; 
+# then
+#     echo 'user found'
+# else
+#     echo 'user not found'
+# fi
+# for i in $@
+# do
+# id $i
+# if [ $? -ne 0 ]
+# then
+# echo "Username does not exist"
+# ##useradd moses
+# else
+# echo "Username exists"
+# fi
+# done
+# # getent passwd $@  
 
-#   for i in $@
-#   do
-#   id $i
-#   if [ $? -ne 0 ]
+# if [ $? -ne 0 ]; then
+#     echo "No, the user does not exist"
+# else
+#     echo "yes the user exists"
+# fi
+##sh user-exists.sh
+#     if getent passwd $1 > /dev/null 2>&1; then
+#     echo "yes the user exists"
+# else
+#     echo "No, the user does not exist"
+# fi
+
+#  for i in $@
+#  do  
+#  id $i 
+#  if [ $? -ne 0 ]
 #  then
-#  echo "User name does not exist"
-#  useradd $i
-#  else 
-#  echo "Username already exists"
+#  echo "User $i not exists"
+#  echo "Creating user $i"
+#  else
+#  echo "user $i already exists"
 #  fi
 #  done
