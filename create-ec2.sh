@@ -5,7 +5,7 @@ INSTANCE_TYPE=""
 IMAGE_ID=ami-03265a0778a880afb
 SECURITY_GROUP_ID=sg-021d144635db8f0b8
 DOMAIN_NAME=sailasdevops.online
-HOSTED_ZONE_ID=Z0308214GYCUYHGJHT8R
+HOSTED_ZONE_ID=Z02662462B6M0IFT9U3J6
 for i in $@
 do
   if [[ $i == "mongodb" || $i == "mysql" ]]
