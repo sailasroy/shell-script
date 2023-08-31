@@ -1,12 +1,12 @@
 #!/bin/bash
 
-NAMES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "cart" "user" "shipping" "payment" "dispatch" "web")
+NAMES= $@
 INSTANCE_TYPE=""
 IMAGE_ID=ami-03265a0778a880afb
 SECURITY_GROUP_ID=sg-021d144635db8f0b8
 DOMAIN_NAME=sailasdevops.online
 HOSTED_ZONE_ID=Z0308214GYCUYHGJHT8R
-for i in "${NAMES[@]}"
+for i in $@
 do
   if [[ $i == "mongodb" || $i == "mysql" ]]
   then
